@@ -7,6 +7,8 @@ function dadosTela(dados){
     
     let receita = document.createElement("h2");
     receita.innerHTML=dados.receita;
+    let imagem=dados.link_imagem;
+    imagem.innerHTML=dados.link_imagem;
     
     let caixa_menor = document.createElement("div");
     let tipo = document.createElement("p");
