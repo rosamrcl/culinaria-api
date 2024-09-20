@@ -4,6 +4,74 @@
 #BFF0404
 #F20707
 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+
+.caixa-maior{
+    background-color: #BFA006 ;
+    border-radius: 25px;
+    padding: 20px;
+    width: 95%;
+    max-width: 450px;
+}
+.receita{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: #F28B0C;
+    color: white;
+    width: calc(100%-100px);
+}
+.busca{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #BFF0404;
+    cursor: pointer;
+    float: right;
+
+
+}
+.botao{
+    width: 20px;
+}
+
+.caixa-media{
+    margin-top: 30px;
+    h2{
+        color: white;
+        font-size: 28px;
+        font-weight: 300px;
+    }
+    p{
+        font-size: 20px;
+        color: white;
+        margin-top: 20px;
+    }
+
+
+}
+.caixa-menor{
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   
+   p{
+    color: white;
+   margin-left: 20px;
+   }
+
+}
+.ingredientes{
+    text-transform: capitalize;
+}
 .social-media{
     height: 30px;
 }
