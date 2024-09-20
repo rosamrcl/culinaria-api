@@ -38,10 +38,10 @@ function dadosTela(dados){
     
 async function buscarReceita(){
     
-    const dados = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://api-receitas-pi.vercel.app/receitas/todas')}`)
+    const dados = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://api-receitas-pi.vercel.app/receitas/todas`)}`)
                         .then((response) => response.json())
-                        .then((data) => console.log(data.contents))
-    console.log(dados)
+
+    return dados.contents;
     
 }
 
