@@ -13,27 +13,27 @@ function dadosTela(dados){
     ingredientes.innerHTML=dados.ingradientes;
     preparo.innerHTML=dados.modo_preparo;
     
-    let caixa_menor = document.createElement("div");
-    let icone = document.createElement("img")
-    caixa_menor.setAttribute("class","caixa-menor");
-    icone.setAttribute("class","icone");
-    icone.setAttribute("src", `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`);
+    // let caixa_menor = document.createElement("div");
+    // let icone = document.createElement("img")
+    // caixa_menor.setAttribute("class","caixa-menor");
+    // icone.setAttribute("class","icone");
+    // icone.setAttribute("src", `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`);
 
-    let previsao=document.createElement("p")
-    let umidade=document.createElement("p")
-    previsao.innerHTML=dados.weather[0].description
-    umidade.innerHTML="Umidade: " + dados.main.humidity +"%"
+    // let previsao=document.createElement("p")
+    // let umidade=document.createElement("p")
+    // previsao.innerHTML=dados.weather[0].description
+    // umidade.innerHTML="Umidade: " + dados.main.humidity +"%"
     
     
     
     
     
-    caixa_menor.appendChild(icone);
-    caixa_menor.appendChild(previsao)
-    caixa_menor.appendChild(umidade)
-    caixa_media.appendChild(city)
-    caixa_media.appendChild(temperatura)
-    caixa_media.appendChild(caixa_menor)
+    caixa_menor.appendChild(receita);
+    caixa_menor.appendChild(tipo)
+    caixa_menor.appendChild(ingredientes)
+    caixa_media.appendChild(preparo)
+    // caixa_media.appendChild(temperatura)
+    // caixa_media.appendChild(caixa_menor)
 
     // document.querySelector(".city").innerHTML="Tempo em "+dados.name
     // document.querySelector(".temperatura").innerHTML= "Temperatura: " + Math.floor(dados.main.temp-273.15)+" ºC"
