@@ -1,4 +1,4 @@
-
+const key "b9d21be9b3msh5e7a0a5f0a4728dp1c8e44jsn2ef1347de548"
 
 //dados = json
 function dadosTela(dados){
@@ -52,3 +52,6 @@ function clicknoBotao(){
 }
 
 buscarReceita()
+
+https://tasty.p.rapidapi.com/tips/list?from=0&size=30&id=3562
+https://rapidapi.com/apidojo/api/tasty
