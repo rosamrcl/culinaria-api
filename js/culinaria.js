@@ -1,60 +1,59 @@
-const key "b9d21be9b3msh5e7a0a5f0a4728dp1c8e44jsn2ef1347de548"
+https://api.edamam.com/doc/open-api/recipe-search-v2.json
+
+const key = "fa9d9fecb1265b2df558781cb2a77ef0"
 
 //dados = json
 function dadosTela(dados){
-    console.log(dados)
     const caixa_media = document.querySelector(".caixa-media");
     
-    let receita = document.createElement("h2");
-    receita.innerHTML=dados.receita;
-    let imagem=dados.link_imagem;
-    imagem.innerHTML=dados.link_imagem;
+    let city = document.createElement("h2");
+    let temperatura = document.createElement("p");
+    city.innerHTML="Tempo em "+dados.name;
+    temperatura.innerHTML="Temperatura: " + Math.floor(dados.main.temp-273.15)+" ºC"
     
     let caixa_menor = document.createElement("div");
-    let tipo = document.createElement("p");
-    let ingredientes = document.createElement("p");
-    let preparo = document.createElement("p");
-    
+    let icone = document.createElement("img")
     caixa_menor.setAttribute("class","caixa-menor");
-    tipo.innerHTML=dados.tipo;
-    ingredientes.innerHTML=dados.ingradientes;
-    preparo.innerHTML=dados.modo_preparo;
-    
-    
-    
-    
-    
-    
-    caixa_menor.appendChild(receita);
-    caixa_menor.appendChild(tipo)
-    caixa_menor.appendChild(ingredientes)
-    caixa_media.appendChild(preparo)
-   
+    icone.setAttribute("class","icone");
+    icone.setAttribute("src", `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`);
 
-   
+    let previsao=document.createElement("p")
+    let umidade=document.createElement("p")
+    previsao.innerHTML=dados.weather[0].description
+    umidade.innerHTML="Umidade: " + dados.main.humidity +"%"
+    
+    
+    
+    
+    
+    caixa_menor.appendChild(icone);
+    caixa_menor.appendChild(previsao)
+    caixa_menor.appendChild(umidade)
+    caixa_media.appendChild(city)
+    caixa_media.appendChild(temperatura)
+    caixa_media.appendChild(caixa_menor)
+
+    // document.querySelector(".city").innerHTML="Tempo em "+dados.name
+    // document.querySelector(".temperatura").innerHTML= "Temperatura: " + Math.floor(dados.main.temp-273.15)+" ºC"
+    // document.querySelector(".previsao").innerHTML=dados.weather[0].description
+    // document.querySelector(".umid").innerHTML="Umidade: " + dados.main.humidity +"%"
+    // document.querySelector(".icone").src=`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
     
 }
 
-    
-async function buscarReceita(){
-    
-    const dados = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://api-receitas-pi.vercel.app/receitas/todas`)}`)
-                        .then((response) => response.json())
 
-    return dados.contents;
-    
+async function buscarCidade(cidade){
+    const dados =await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br&unit=metric`).then(response=>response.json())
+    dadosTela(dados)
+     
+
 }
 
 
 function clicknoBotao(){
-    const receita=document.querySelector(".receita").value
-    buscarReceita(receita)
+    const cidade=document.querySelector(".cidade").value
+    buscarCidade(cidade)
 }
 
-buscarReceita()
+buscarCidade('Maceió')
 
-// https://tasty.p.rapidapi.com/tips/list?from=0&size=30&id=3562
-// https://rapidapi.com/apidojo/api/tasty
-
-// 3131a2abd01245f6bc50804ec5638097
-// https://apileague.com/apis/search-recipes-api/
