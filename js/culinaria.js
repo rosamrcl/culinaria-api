@@ -53,5 +53,8 @@ function clicknoBotao(){
 
 buscarReceita()
 
-https://tasty.p.rapidapi.com/tips/list?from=0&size=30&id=3562
-https://rapidapi.com/apidojo/api/tasty
+// https://tasty.p.rapidapi.com/tips/list?from=0&size=30&id=3562
+// https://rapidapi.com/apidojo/api/tasty
+
+// 3131a2abd01245f6bc50804ec5638097
+// https://apileague.com/apis/search-recipes-api/
