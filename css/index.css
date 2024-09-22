@@ -1,0 +1,65 @@
+/* Cores:  #BFA006 
+#F28B0C
+#8C593B
+#BFF0404
+#F20707
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;    
+
+}
+
+.titulo{
+    background-color: #044e35;
+    color:aliceblue;
+    padding: 10px;
+}
+form{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display:flex;
+}
+#pesquisa{
+    padding: 5px;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+.procura{
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #044e35;
+    color: aliceblue;
+}
+.lista{
+    padding: 5px;
+    margin-top:10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.item{
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    margin: 5px;
+    border: 2px solid #044e35;
+    border-radius: 5px;
+}
+.item:hover{
+    background-color: #044e35;
+    cursor: pointer;
+}
+.poster{
+    width: 100%;
+}
+
+.social-media{
+    height: 30px;
+}
