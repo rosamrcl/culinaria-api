@@ -16,10 +16,10 @@ frmPesquisa.onsubmit= (ev) => {
         const lista = document.querySelector(".lista");
         lista.innerHTML ="";
         
-        // if (json.Response=='False'){
-        //     alert('Nenhum filme encontrado');
-        //     return
-        // }
+        if (json.Response=='False'){
+            alert('Nenhum filme encontrado');
+            return
+        }
 
         json.Search.forEach(element => {
             
