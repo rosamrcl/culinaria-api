@@ -2,7 +2,7 @@ const apiKey = "eea36371"
 const frmPesquisa = document.querySelector("form");
 frmPesquisa.onsubmit= (ev) => {
     ev.preventDefault();
-    const pesquisa = ev.target.pesquisa.value;
+    const pesquisa = document.querySelector(".pesquisa").value;
     if (pesquisa==""){
         alert ('Preencha o campo!');
         return
@@ -14,13 +14,13 @@ frmPesquisa.onsubmit= (ev) => {
 }
     const carregaLista = (json) =>{
         const lista = document.querySelector(".lista");
-        lista.innerHTML ="";
-        
+                
         if (json.Response=='False'){
             alert('Nenhum filme encontrado');
             return
         }
-
+        
+        lista.innerHTML ="";
         json.Search.forEach(element => {
             
 
